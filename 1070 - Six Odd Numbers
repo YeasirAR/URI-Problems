@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+  int input,i;
+  scanf("%d",&input);
+  input++;
+  for(i=1; i<=12; i=i+2)
+  {
+      printf("%d\n",input);
+      input+=2;
+  }
+     return 0;
+}
+
