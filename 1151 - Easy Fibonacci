@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+    int i,N,series[45],first=0,second=1,fibo;
+    scanf("%d",&N);
+    series[0]=0;
+    series[1]=1;
+    for(i=2; i<N; i++)
+    {
+        fibo=first+second;
+        series[i]=fibo;
+        first=second;
+        second=fibo;
+    }
+
+    for(i=0; i<N; i++)
+    {
+        if(i+1==N)
+        {
+            printf("%d\n",series[i]);
+        }
+        else
+        {
+            printf("%d ",series[i]);
+        }
+    }
+
+    return 0;
+}
