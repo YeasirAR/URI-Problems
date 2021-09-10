@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main ()
+{
+    int i,j,count=0;
+    char O;
+    float sum=0, M[12][12];
+    scanf(" %c",&O);
+    for(i=0; i<12; i++)
+    {
+        for(j=0; j<12; j++)
+        {
+            scanf("%f", &M[i][j]);
+        }
+    }
+    if(O=='S')
+    {
+        for(i=0; i<11; i++)
+        {
+            for(j=10-i; j>=0; j--)
+            {
+                sum=sum+M[i][j];
+            }
+        }
+
+    }
+    if(O=='M')
+    {
+        for(i=0; i<11; i++)
+        {
+            for(j=10-i; j>=0; j--)
+            {
+                sum=sum+M[i][j];
+                count++;
+            }
+        }
+        sum=sum/count;
+
+    }
+    printf("%.1f\n",sum);
+
+
+    return 0;
+}
